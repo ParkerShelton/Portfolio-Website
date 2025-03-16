@@ -1,0 +1,24 @@
+:root {
+  --parallax-y: 0px;
+}
+
+.parallax-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: 
+    linear-gradient(135deg, transparent 0%, transparent 40%, #637792ff 40%, #637792ff 60%, transparent 60%, transparent 100%),
+    radial-gradient(circle at 20% 30%, #637792ff 0%, #637792ff 6%, transparent 6%, transparent 100%),
+    radial-gradient(circle at 80% 70%, #637792ff 0%, #637792ff 5%, transparent 5%, transparent 100%),
+    radial-gradient(circle at 90% 20%, #637792ff 0%, #637792ff 4%, transparent 4%, transparent 100%),
+    radial-gradient(circle at 10% 80%, #637792ff 0%, #637792ff 4%, transparent 4%, transparent 100%),
+    radial-gradient(circle at 50% 50%, #637792ff 0%, #637792ff 3%, transparent 3%, transparent 100%);
+  background-size: 100% 100%;
+  background-position: center calc(var(--parallax-y) * -1);
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}

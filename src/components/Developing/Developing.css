@@ -1,0 +1,215 @@
+/* Developing section styling */
+.developing-section {
+  background-color: transparent; /* Changed from slate-gray to transparent */
+  padding: 80px 20px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background pattern */
+/*.developing-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, transparent 0, transparent 5%, #647990 5.5%, transparent 6%),
+    radial-gradient(circle at 30% 60%, transparent 0, transparent 3%, #647990 3.5%, transparent 4%),
+    radial-gradient(circle at 50% 30%, transparent 0, transparent 4%, #647990 4.5%, transparent 5%),
+    radial-gradient(circle at 70% 80%, transparent 0, transparent 4%, #647990 4.5%, transparent 5%),
+    radial-gradient(circle at 90% 40%, transparent 0, transparent 3%, #647990 3.5%, transparent 4%);
+  background-size: 80px 80px;
+  opacity: 0.3;
+  z-index: 0;
+}*/
+
+.developing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.developing-title {
+  font-family: 'Ordinary Notes', sans-serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: #38382eff; /* black-olive */
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.developing-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #be6e46ff; /* brown-sugar */
+  border-radius: 2px;
+}
+
+.developing-content {
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 50px; /* Add space between text and carousel */
+}
+
+.developing-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #38382eff; /* black-olive */
+}
+
+/* Carousel styling */
+.carousel-container {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+
+.carousel {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navigation arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: rgba(56, 56, 46, 0.6); /* semi-transparent black-olive */
+  color: #fffffaff; /* baby-powder */
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.carousel-arrow:hover {
+  background-color: #be6e46ff; /* brown-sugar */
+}
+
+.carousel-arrow.prev {
+  left: 15px;
+}
+
+.carousel-arrow.next {
+  right: 15px;
+}
+
+/* Indicator dots */
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 250, 0.5); /* semi-transparent baby-powder */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.indicator.active {
+  background-color: #fffffaff; /* baby-powder */
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .developing-section {
+    padding: 60px 20px;
+  }
+  
+  .developing-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .developing-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .carousel {
+    height: 300px;
+  }
+  
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 200px;
+  }
+  
+  .carousel-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+}

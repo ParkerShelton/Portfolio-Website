@@ -1,0 +1,55 @@
+/* Hero section styling */
+.hero {
+  background-color: transparent; /* Changed from slate-gray to transparent */
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: clamp(10vh, 15vh, 20vh); /* Responsive top padding */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%;
+  margin: 0;
+}
+
+.hero-content {
+  width: 90%; /* Use percentage width instead of fixed */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-family: 'Ordinary Notes', sans-serif;
+  font-size: clamp(4rem, 10vw, 9rem); /* Responsive font size */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #38382eff; /* black-olive */
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+.hero h2 {
+  font-size: clamp(1.5rem, 3vw, 2.4rem); /* Responsive font size */
+  font-weight: 400;
+  color: #38382eff; /* black-olive */
+  letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 10vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+}
