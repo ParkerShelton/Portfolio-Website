@@ -1,0 +1,8 @@
+/* CSS HEX */
+--baby-powder: #fffffaff;
+--brown-sugar: #be6e46ff;
+--slate-gray: #7286a0ff;
+--slate-gray-darker: #637792ff
+--charcoal: #425061ff;
+--ebony: #59594aff;
+--black-olive: #38382eff;
