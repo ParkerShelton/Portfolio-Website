@@ -28,6 +28,7 @@ body {
   font-family: 'Roboto', 'Segoe UI', 'Arial', sans-serif;
   line-height: 1.6;
   color: #38382eff; /* black-olive */
+  background-color: #7286a0ff; /* slate-gray */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   position: relative;
 }
@@ -46,7 +47,7 @@ body::before {
     radial-gradient(circle at 90% 20%, #637792ff 0%, #637792ff 4%, transparent 4%, transparent 100%),
     radial-gradient(circle at 10% 80%, #637792ff 0%, #637792ff 4%, transparent 4%, transparent 100%),
     radial-gradient(circle at 50% 50%, #637792ff 0%, #637792ff 3%, transparent 3%, transparent 100%);
-  background-size: 100% 100%; /* Size to cover the entire viewport */
+  background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
   opacity: 0.2;
