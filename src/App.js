@@ -4,12 +4,10 @@ import '../src/fonts/fonts.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Developing from './components/Developing';
-import ParallaxBackground from './components/ParallaxBackground';
 
 function App() {
   return (
     <div className="App">
-      <ParallaxBackground />
       <Header />
       
       <main>
