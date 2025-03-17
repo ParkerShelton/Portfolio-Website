@@ -1,4 +1,0 @@
-{
-    "httpMethod": "POST",
-    "body": "{\"name\":\"Test User\",\"email\":\"your-test-email@example.com\",\"message\":\"This is a test message\"}"
-  }

@@ -38,7 +38,7 @@ Resources:
       Cors:
         AllowMethods: "'POST, OPTIONS'"
         AllowHeaders: "'Content-Type'"
-        AllowOrigin: "'https://your-cloudfront-domain.com'" # Update with your CloudFront domain
+        AllowOrigin: "'https://www.parkershelton.com'" # Update with your CloudFront domain
         MaxAge: "'86400'"
 
 Outputs:
