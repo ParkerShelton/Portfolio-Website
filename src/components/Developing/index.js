@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Developing.css';
+import Skills from '../Skills/Skills';
 
 const Developing = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,6 +39,11 @@ const Developing = () => {
     <section id="developing" className="developing-section">
       <div className="developing-container">
         <h2 className="developing-title">Developing</h2>
+        
+        {/* Added subtitle and Skills component right under the title */}
+        <h3 className="developing-subtitle">Relevant Skills:</h3>
+        <Skills showTitle={false} className="developing-skills" />
+        
         <div className="developing-content">
           <p>
             With a passion for clean code and innovative solutions, I specialize in building 

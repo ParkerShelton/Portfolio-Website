@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isAboutPage = location.pathname === '/about';
+  const isContactPage = location.pathname === '/contact';
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -25,8 +29,17 @@ const Header = () => {
             <a href="#home" className="logo-link">Art</a>
           </div>
           <div className="button-group">
-            <a href="#about" className="contact-me-btn">ABOUT ME</a>
-            <a href="#contact" className="contact-me-btn">CONTACT ME</a>
+            {isAboutPage ? (
+              <Link to="/" className="contact-me-btn">HOME</Link>
+            ) : (
+              <Link to="/about" className="contact-me-btn">ABOUT ME</Link>
+            )}
+            
+            {isContactPage ? (
+              <Link to="/" className="contact-me-btn">HOME</Link>
+            ) : (
+              <Link to="/contact" className="contact-me-btn">CONTACT ME</Link>
+            )}
           </div>
         </div>
         
@@ -45,8 +58,18 @@ const Header = () => {
           <a href="#home" className="mobile-link">3D Modeling</a>
           <a href="#home" className="mobile-link">Art</a>
           <div className="mobile-divider"></div>
-          <a href="#about" className="mobile-link">ABOUT ME</a>
-          <a href="#contact" className="mobile-link">CONTACT ME</a>
+          
+          {isAboutPage ? (
+            <Link to="/" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>HOME</Link>
+          ) : (
+            <Link to="/about" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>ABOUT ME</Link>
+          )}
+          
+          {isContactPage ? (
+            <Link to="/" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>HOME</Link>
+          ) : (
+            <Link to="/contact" className="mobile-link" onClick={() => setMobileMenuOpen(false)}>CONTACT ME</Link>
+          )}
         </div>
       </div>
     </header>
