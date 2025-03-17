@@ -1,8 +1,6 @@
 /* CSS HEX */
---baby-powder: #fffffaff;
---brown-sugar: #be6e46ff;
---slate-gray: #7286a0ff;
---slate-gray-darker: #637792ff
---charcoal: #425061ff;
---ebony: #59594aff;
---black-olive: #38382eff;
+--space-cadet: #22223bff;
+--ultra-violet: #4a4e69ff;
+--rose-quartz: #9a8c98ff;
+--pale-dogwood: #c9ada7ff;
+--isabelline: #f2e9e4ff;

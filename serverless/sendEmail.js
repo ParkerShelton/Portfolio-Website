@@ -3,7 +3,7 @@ const AWS = require('aws-sdk');
 exports.handler = async (event) => {
   // Set CORS headers for browser preflight
   const headers = {
-    'Access-Control-Allow-Origin': 'https://your-cloudfront-domain.com', // Update with your CloudFront domain
+    'Access-Control-Allow-Origin': 'https://www.parkershelton.com', // Update with your CloudFront domain
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': '86400'
@@ -19,15 +19,15 @@ exports.handler = async (event) => {
   }
 
   try {
-    const SES = new AWS.SES({ region: 'us-east-1' }); // Update with your AWS region
+    const SES = new AWS.SES({ region: 'us-east-2' }); // Update with your AWS region
     const body = JSON.parse(event.body);
     const { name, email, message } = body;
 
     // Email parameters
     const params = {
-      Source: 'your-verified-email@example.com', // Must be verified in SES
+      Source: 'contact.parkersheltonaws@gmail.com', // Must be verified in SES
       Destination: {
-        ToAddresses: ['your-receiving-email@example.com']
+        ToAddresses: ['parkersheltonaws@gmail.com']
       },
       ReplyToAddresses: [email],
       Message: {
