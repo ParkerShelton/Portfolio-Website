@@ -3,6 +3,7 @@ import './App.css';
 import '../src/fonts/fonts.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Skills from './components/Skills/Skills';
 import Developing from './components/Developing';
 
 function App() {
@@ -66,43 +67,6 @@ function App() {
                 <a href="#" className="project-link">View Project</a>
                 <a href="#" className="project-link">Source Code</a>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="skills" className="skills">
-          <h2 className="section-title">My Skills</h2>
-          <div className="skills-container">
-            <div className="skill-category">
-              <h3>Frontend</h3>
-              <ul>
-                <li>HTML5</li>
-                <li>CSS3 & Sass</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React</li>
-                <li>Responsive Design</li>
-              </ul>
-            </div>
-            
-            <div className="skill-category">
-              <h3>Backend</h3>
-              <ul>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>MongoDB</li>
-                <li>RESTful APIs</li>
-              </ul>
-            </div>
-            
-            <div className="skill-category">
-              <h3>Tools & Design</h3>
-              <ul>
-                <li>Git & GitHub</li>
-                <li>Figma & Adobe XD</li>
-                <li>Visual Studio Code</li>
-                <li>UI/UX Design</li>
-                <li>Webpack</li>
-              </ul>
             </div>
           </div>
         </section>

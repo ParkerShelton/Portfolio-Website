@@ -52,9 +52,17 @@
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
-  height: 4px;
+  height: 3px;
   background-color: #be6e46ff; /* brown-sugar */
-  border-radius: 2px;
+}
+
+.developing-subtitle {
+  font-size: 1.5rem;
+  color: #38382eff; /* black-olive */
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .developing-content {
@@ -68,6 +76,25 @@
   line-height: 1.8;
   margin-bottom: 20px;
   color: #38382eff; /* black-olive */
+}
+
+/* Skills styling within Developing component */
+.developing-skills {
+  margin-bottom: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.developing-skills .skill-category {
+  background-color: rgba(255, 255, 250, 0.9); /* semi-transparent baby-powder */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
+  border: 1px solid #7286a0ff; /* slate-gray */
+}
+
+.developing-skills .skill-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
 }
 
 /* Carousel styling */
