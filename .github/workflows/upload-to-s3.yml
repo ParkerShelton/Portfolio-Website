@@ -21,4 +21,4 @@ jobs:
 
       - name: Upload files to S3
         run: |
-          aws s3 cp . s3://www.parker-shelton.com/ --recursive --exclude '*' --include 'Portfolio-Website/*' # Replace with your bucket name and directory
+          aws s3 cp . s3://www.parker-shelton.com/ --recursive --exclude "node_modules/*" --exclude ".git/*" --exclude ".github/*"
