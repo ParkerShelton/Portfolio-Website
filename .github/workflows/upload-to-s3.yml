@@ -1,0 +1,31 @@
+name: Upload to S3
+
+on:
+  push:
+    branches: [ main ]  # Or your desired branch
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y awscli
+          sudo apt-get install -y jq
+
+      - name: Configure AWS credentials
+        run: |
+          aws configure
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set region us-east-2
+          aws configure set output json
+
+      - name: Upload files to S3
+        run: |
+          aws s3 cp . s3://www.parker-shelton.com/ --recursive --exclude '*' --include 'Portfolio-Website/*' # Replace with your bucket name and directory
