@@ -1,0 +1,47 @@
+# template.yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  ContactFormFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./
+      Handler: sendEmail.handler
+      Runtime: nodejs16.x
+      MemorySize: 128
+      Timeout: 10
+      Policies:
+        - Statement:
+          - Effect: Allow
+            Action:
+              - ses:SendEmail
+            Resource: '*'
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /contact
+            Method: post
+            RestApiId: !Ref ContactFormApi
+        OptionsEvent:
+          Type: Api
+          Properties:
+            Path: /contact
+            Method: options
+            RestApiId: !Ref ContactFormApi
+
+  ContactFormApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+      Cors:
+        AllowMethods: "'POST, OPTIONS'"
+        AllowHeaders: "'Content-Type'"
+        AllowOrigin: "'https://your-cloudfront-domain.com'" # Update with your CloudFront domain
+        MaxAge: "'86400'"
+
+Outputs:
+  ApiUrl:
+    Description: URL of the API endpoint
+    Value: !Sub "https://${ContactFormApi}.execute-api.${AWS::Region}.amazonaws.com/prod/contact"
