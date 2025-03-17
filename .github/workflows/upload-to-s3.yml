@@ -22,3 +22,9 @@ jobs:
       - name: Upload files to S3
         run: |
           aws s3 cp . s3://www.parker-shelton.com/ --recursive --exclude "node_modules/*" --exclude ".git/*" --exclude ".github/*"
+
+      - name: Build and deploy SAM application
+        run: |
+          cd serverless
+          sam build
+          sam deploy --stack-name contact-form-api --no-confirm-changeset --no-fail-on-empty-changeset
