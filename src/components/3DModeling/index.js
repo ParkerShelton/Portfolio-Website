@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import './Developing.css';
-import Skills from '../Skills/Skills';
+import './3DModeling.css';
+import ModelingSkills from '../Skills/ModelingSkills';
 
-const Developing = () => {
+const ThreeDModeling = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   // Temporary image placeholders (URLs that can be replaced later)
   const carouselImages = [
-    'https://via.placeholder.com/800x400/425061/ffffff?text=Development+Project+1',
-    'https://via.placeholder.com/800x400/425061/ffffff?text=Development+Project+2',
-    'https://via.placeholder.com/800x400/425061/ffffff?text=Development+Project+3',
-    'https://via.placeholder.com/800x400/425061/ffffff?text=Development+Project+4'
+    'https://via.placeholder.com/800x400/425061/ffffff?text=3D+Model+1',
+    'https://via.placeholder.com/800x400/425061/ffffff?text=3D+Model+2',
+    'https://via.placeholder.com/800x400/425061/ffffff?text=3D+Model+3',
+    'https://via.placeholder.com/800x400/425061/ffffff?text=3D+Render+4'
   ];
   
   // Auto-advance the carousel
@@ -36,26 +36,24 @@ const Developing = () => {
   };
 
   return (
-    <section id="developing-section" className="developing-section">
-      <div className="developing-container">
-        <h2 className="developing-title">Developing</h2>
+    <section id="modeling-section" className="modeling-section">
+      <div className="modeling-container">
+        <h2 className="modeling-title">3D Modeling</h2>
         
-        {/* Added subtitle and Skills component right under the title */}
-        <h3 className="developing-subtitle">Relevant Skills:</h3>
-        <Skills showTitle={false} className="developing-skills" />
+        {/* Added subtitle and ModelingSkills component right under the title */}
+        <h3 className="modeling-subtitle">Relevant Skills:</h3>
+        <ModelingSkills showTitle={false} className="modeling-skills" />
         
-        <div className="developing-content">
+        <div className="modeling-content">
           <p>
-            With a passion for clean code and innovative solutions, I specialize in building 
-            responsive web applications and interactive user experiences. My development 
-            philosophy centers on creating software that is not only functional but also 
-            intuitive and accessible.
+            I create detailed and realistic 3D models for various applications, from architectural 
+            visualization to character design. My approach combines technical precision with artistic 
+            sensibility, ensuring that each model is not only accurate but also visually compelling.
           </p>
           <p>
-            I enjoy working with modern frameworks and libraries, continuously exploring 
-            new technologies to enhance my skill set. Whether it's front-end design, 
-            back-end architecture, or full-stack integration, I approach each project 
-            with attention to detail and a commitment to quality.
+            I work with industry-standard software and stay current with the latest techniques 
+            and technologies. Whether it's hard-surface modeling, organic shapes, or complex scenes, 
+            I deliver high-quality assets optimized for their intended use.
           </p>
         </div>
         
@@ -67,7 +65,7 @@ const Developing = () => {
                 key={index} 
                 className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
               >
-                <img src={image} alt={`Project ${index + 1}`} />
+                <img src={image} alt={`Model ${index + 1}`} />
               </div>
             ))}
           </div>
@@ -93,4 +91,4 @@ const Developing = () => {
   );
 };
 
-export default Developing;
+export default ThreeDModeling;

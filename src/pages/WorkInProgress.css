@@ -1,0 +1,106 @@
+.wip-content {
+  flex: 1;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  min-height: 90vh; /* Ensure the content takes up nearly the full viewport height since there's no header */
+}
+
+.wip-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #f2e9e4ff; /* isabelline */
+  border-radius: 10px;
+  padding: 50px 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #9a8c98ff; /* rose-quartz */
+}
+
+.wip-title {
+  font-size: 3rem;
+  color: #22223bff; /* space-cadet */
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.wip-icon {
+  font-size: 4rem;
+  margin: 20px 0;
+  position: relative;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wip-icon .gear {
+  animation: rotate 8s linear infinite;
+  position: absolute;
+  font-size: 5rem;
+}
+
+.wip-icon .tool {
+  animation: wiggle 3s ease-in-out infinite;
+  position: absolute;
+  transform: translateX(20px) translateY(-10px) rotate(45deg);
+  font-size: 3rem;
+}
+
+.wip-message {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #22223bff; /* space-cadet */
+  margin: 30px 0;
+}
+
+/* Animations */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: translateX(20px) translateY(-10px) rotate(45deg);
+  }
+  50% {
+    transform: translateX(25px) translateY(-15px) rotate(30deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .wip-title {
+    font-size: 2.5rem;
+  }
+  
+  .wip-message {
+    font-size: 1.3rem;
+  }
+  
+  .wip-container {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wip-title {
+    font-size: 2rem;
+  }
+  
+  .wip-message {
+    font-size: 1.1rem;
+  }
+  
+  .wip-icon {
+    font-size: 3rem;
+  }
+}

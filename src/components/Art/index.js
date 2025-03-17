@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import './Developing.css';
-import Skills from '../Skills/Skills';
+import './Art.css';
+import ArtSkills from '../Skills/ArtSkills';
 
-const Developing = () => {
+const Art = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   // Temporary image placeholders (URLs that can be replaced later)
   const carouselImages = [
-    'https://via.placeholder.com/800x400/425061/ffffff?text=Development+Project+1',
-    'https://via.placeholder.com/800x400/425061/ffffff?text=Development+Project+2',
-    'https://via.placeholder.com/800x400/425061/ffffff?text=Development+Project+3',
-    'https://via.placeholder.com/800x400/425061/ffffff?text=Development+Project+4'
+    'https://via.placeholder.com/800x400/425061/ffffff?text=Artwork+1',
+    'https://via.placeholder.com/800x400/425061/ffffff?text=Artwork+2',
+    'https://via.placeholder.com/800x400/425061/ffffff?text=Artwork+3',
+    'https://via.placeholder.com/800x400/425061/ffffff?text=Artwork+4'
   ];
   
   // Auto-advance the carousel
@@ -36,26 +36,24 @@ const Developing = () => {
   };
 
   return (
-    <section id="developing-section" className="developing-section">
-      <div className="developing-container">
-        <h2 className="developing-title">Developing</h2>
+    <section id="art-section" className="art-section">
+      <div className="art-container">
+        <h2 className="art-title">Art</h2>
         
-        {/* Added subtitle and Skills component right under the title */}
-        <h3 className="developing-subtitle">Relevant Skills:</h3>
-        <Skills showTitle={false} className="developing-skills" />
+        {/* Added subtitle and ArtSkills component right under the title */}
+        <h3 className="art-subtitle">Relevant Skills:</h3>
+        <ArtSkills showTitle={false} className="art-skills" />
         
-        <div className="developing-content">
+        <div className="art-content">
           <p>
-            With a passion for clean code and innovative solutions, I specialize in building 
-            responsive web applications and interactive user experiences. My development 
-            philosophy centers on creating software that is not only functional but also 
-            intuitive and accessible.
+            My artistic practice spans various mediums and styles, from traditional painting and drawing
+            to digital illustration and mixed media. I approach each piece with a focus on expression,
+            composition, and technical craftsmanship.
           </p>
           <p>
-            I enjoy working with modern frameworks and libraries, continuously exploring 
-            new technologies to enhance my skill set. Whether it's front-end design, 
-            back-end architecture, or full-stack integration, I approach each project 
-            with attention to detail and a commitment to quality.
+            I find inspiration in natural forms, urban environments, and the intersection of organic and
+            geometric elements. My work often explores themes of texture, light, and narrative, creating
+            pieces that invite viewers to discover their own interpretations and connections.
           </p>
         </div>
         
@@ -67,7 +65,7 @@ const Developing = () => {
                 key={index} 
                 className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
               >
-                <img src={image} alt={`Project ${index + 1}`} />
+                <img src={image} alt={`Artwork ${index + 1}`} />
               </div>
             ))}
           </div>
@@ -93,4 +91,4 @@ const Developing = () => {
   );
 };
 
-export default Developing;
+export default Art;

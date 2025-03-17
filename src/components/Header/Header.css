@@ -1,16 +1,18 @@
 /* Header styling */
 .header {
-  background-color: #7286a0ff; /* slate-gray */
+  background-color: #c9ada7ff; /* pale-dogwood */
   width: calc(100% - 20px); /* Adjusted width to account for margin */
   height: 80px; /* Fixed height */
   padding: 0; /* Remove padding to maintain fixed height */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 2px solid #38382eff; /* black-olive */
+  display: flex; /* Flex container for content */
+  border: 2px solid #9a8c98ff; /* rose-quartz */
   margin: 10px; /* Adding margin around the header */
   border-radius: 8px; /* Adding rounded corners */
   position: sticky; /* Make header sticky */
-  top: 10px; /* Add a small gap at the top when sticky */
-  z-index: 1000; /* Ensure header stays on top of other content */
+  top: 10px; /* Adjusted to account for margin */
+  z-index: 1000; /* Ensure header stays on top */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for elevation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
@@ -33,7 +35,7 @@
   font-size: clamp(18px, 4vw, 24px); /* Responsive font size */
   font-weight: bold;
   margin: 0;
-  color: #38382eff; /* black-olive */
+  color: #22223bff; /* space-cadet for contrast against pale-dogwood */
   letter-spacing: 1px;
   white-space: nowrap; /* Prevent wrapping */
 }
@@ -51,7 +53,7 @@
 .logo-link {
   font-size: 1.2rem;
   font-weight: 400;
-  color: #38382eff; /* black-olive */
+  color: #22223bff; /* space-cadet for contrast against pale-dogwood */
   text-decoration: none;
   white-space: nowrap; /* Prevent wrapping */
   transition: all 0.3s ease;
@@ -60,13 +62,13 @@
 }
 
 .logo-link:hover {
-  color: #fffffaff; /* baby-powder (white) */
-  background-color: #be6e46ff; /* brown-sugar */
+  color: #f2e9e4ff; /* isabelline */
+  background-color: #9a8c98ff; /* rose-quartz */
 }
 
 /* Separator styling */
 .separator {
-  color: #38382eff; /* black-olive */
+  color: #22223bff; /* space-cadet for contrast against pale-dogwood */
   opacity: 0.7;
   font-size: 1.2rem;
 }
@@ -122,24 +124,23 @@
 
 /* Button styling */
 .contact-me-btn {
-  background-color: #38382eff; /* black-olive */
-  color: #fffffaff; /* baby-powder */
+  background-color: #4a4e69ff; /* ultra-violet */
+  color: #f2e9e4ff; /* isabelline */
   padding: 10px 16px;
   border-radius: 8px;
   font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: clamp(12px, 2vw, 14px); /* Responsive font size */
   text-decoration: none;
-  letter-spacing: 0.5px;
-  transition: all 0.3s;
-  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s ease;
   text-transform: uppercase;
-  white-space: nowrap; /* Prevent text wrapping */
+  letter-spacing: 1px;
+  margin-left: 10px;
 }
 
 .contact-me-btn:hover {
-  background-color: #be6e46ff; /* brown-sugar */
-  color: #fffffaff; /* baby-powder */
+  background-color: #9a8c98ff; /* rose-quartz */
+  color: #f2e9e4ff; /* isabelline */
 }
 
 /* Navigation (currently hidden) */
@@ -168,7 +169,7 @@
   display: block;
   height: 3px;
   width: 100%;
-  background-color: #38382eff; /* black-olive */
+  background-color: #22223bff; /* space-cadet for contrast against pale-dogwood */
   border-radius: 3px;
   transition: all 0.3s ease;
 }
@@ -193,8 +194,8 @@
   top: calc(100% + 5px);
   left: 10px;
   right: 10px;
-  background-color: #7286a0ff; /* slate-gray */
-  border: 2px solid #38382eff; /* black-olive */
+  background-color: #c9ada7ff; /* pale-dogwood */
+  border: 2px solid #9a8c98ff; /* rose-quartz */
   border-radius: 8px;
   padding: 15px;
   flex-direction: column;
@@ -209,7 +210,7 @@
 
 .mobile-link {
   padding: 12px 15px;
-  color: #38382eff; /* black-olive */
+  color: #22223bff; /* space-cadet for contrast against pale-dogwood */
   text-decoration: none;
   font-size: 1.1rem;
   border-radius: 4px;
@@ -218,13 +219,14 @@
 }
 
 .mobile-link:hover {
-  background-color: #be6e46ff; /* brown-sugar */
-  color: #fffffaff; /* baby-powder */
+  background-color: #9a8c98ff; /* rose-quartz */
+  color: #f2e9e4ff; /* isabelline */
 }
 
 .mobile-divider {
-  height: 1px;
-  background-color: #38382eff; /* black-olive */
+  height: 2px;
+  width: 50%;
+  background-color: #9a8c98ff; /* rose-quartz */
   opacity: 0.2;
   margin: 10px 0;
 }
