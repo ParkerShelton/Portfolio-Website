@@ -1,120 +1,34 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import '../src/fonts/fonts.css';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Skills from './components/Skills/Skills';
-import Developing from './components/Developing';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import './pages/PageStyles.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      
-      <main>
-        <Hero />
-        <Developing />
-
-        <section id="about" className="about">
-          <h2 className="section-title">About Me</h2>
-          <div className="about-content">
-            <div className="about-text">
-              <p>
-                Hello! I'm Sophie, a passionate web developer and designer with a keen eye for detail and a 
-                love for creating intuitive, user-friendly digital experiences. With a background in both 
-                design and development, I bring a unique perspective to every project.
-              </p>
-              <p>
-                I focus on delivering clean, efficient code while maintaining beautiful aesthetics.
-                When I'm not coding, you can find me exploring new design trends, sketching ideas, 
-                or enjoying the outdoors for fresh inspiration.
-              </p>
-            </div>
+    <Router>
+      <div className="App">
+        <Header />
+        
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        
+        <footer className="footer">
+          <div className="footer-content">
+            <p>&copy; {new Date().getFullYear()} Parker Shelton. All Rights Reserved.</p>
           </div>
-        </section>
-
-        <section id="projects" className="projects">
-          <h2 className="section-title">My Projects</h2>
-          <div className="project-grid">
-            {/* Project Card 1 */}
-            <div className="project-card">
-              <div className="project-image"></div>
-              <h3>E-Commerce Platform</h3>
-              <p>A fully responsive e-commerce website with product filtering, shopping cart, and secure checkout features.</p>
-              <div className="project-links">
-                <a href="#" className="project-link">View Project</a>
-                <a href="#" className="project-link">Source Code</a>
-              </div>
-            </div>
-            
-            {/* Project Card 2 */}
-            <div className="project-card">
-              <div className="project-image"></div>
-              <h3>Recipe Finder App</h3>
-              <p>An interactive application that allows users to search for recipes based on ingredients they have at home.</p>
-              <div className="project-links">
-                <a href="#" className="project-link">View Project</a>
-                <a href="#" className="project-link">Source Code</a>
-              </div>
-            </div>
-            
-            {/* Project Card 3 */}
-            <div className="project-card">
-              <div className="project-image"></div>
-              <h3>Photography Portfolio</h3>
-              <p>A sleek, minimalist portfolio site for a professional photographer with image galleries and contact form.</p>
-              <div className="project-links">
-                <a href="#" className="project-link">View Project</a>
-                <a href="#" className="project-link">Source Code</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="contact">
-          <h2 className="section-title">Get In Touch</h2>
-          <div className="contact-container">
-            <form className="contact-form">
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" className="submit-button">Send Message</button>
-            </form>
-            
-            <div className="contact-info">
-              <div className="contact-item">
-                <h3>Email</h3>
-                <p>sophie@example.com</p>
-              </div>
-              <div className="contact-item">
-                <h3>Location</h3>
-                <p>Boston, MA</p>
-              </div>
-              <div className="social-links">
-                <a href="#" className="social-link">LinkedIn</a>
-                <a href="#" className="social-link">GitHub</a>
-                <a href="#" className="social-link">Twitter</a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <footer className="footer">
-        <div className="footer-content">
-          <p>&copy; {new Date().getFullYear()} Sophie Westfall. All Rights Reserved.</p>
-        </div>
-      </footer>
-    </div>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
