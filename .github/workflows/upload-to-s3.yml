@@ -27,4 +27,4 @@ jobs:
         run: |
           cd serverless
           sam build
-          sam deploy --stack-name contact-form-api --no-confirm-changeset --no-fail-on-empty-changeset
+          sam deploy --stack-name contact-form-api --no-confirm-changeset --no-fail-on-empty-changeset --s3-bucket www.parker-shelton.com
